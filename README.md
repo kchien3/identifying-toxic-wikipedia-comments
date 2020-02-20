@@ -6,7 +6,7 @@ See my notebook "toxic-comments-projects.ipynb" for now.
 **Identifying Toxic Comments**
 
 ## Andrew Kin-Yip Chien
-[Linkedin](https://www.linkedin.com/in/andrew-k-chien/) | [Github](https://github.com/kchien3) | [Slides](https://github.com/kchien3/chicago-ticket-project/blob/master/presentation/chicago_tickets_project_slides.pdf)
+[Linkedin](https://www.linkedin.com/in/andrew-k-chien/) | [Github](https://github.com/kchien3) | [Slides](https://github.com/kchien3/chicago-ticket-project/blob/master/presentation/Identiy Toxic Comments.pdf)
 
 ## Table of Contents
 
