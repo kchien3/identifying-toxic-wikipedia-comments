@@ -36,7 +36,7 @@ This project uses a [modified version](https://www.kaggle.com/c/jigsaw-toxic-com
 ### Text Vectorization
 #### Term Frequency-Inverse Document Frequency
 <div align='center>
-<img src='img/tf_idf_equation.png'>
+<img src="img/tf_idf_equation.png">
 </div>
 
 
