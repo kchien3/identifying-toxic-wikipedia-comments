@@ -50,7 +50,7 @@ After appropriate train-test splitting of the data set, tf-idf vectorization res
 
 ## Exploration
 Tf-idf vectorization was used to rank word importances within the toxic and nontoxic comment classes. The top 10 unique words within each class are (unordered):
-Toxic: ass, bitch, dick, don', f**k, f***ing, like, s**t, stop, stupid, suck.
+Toxic: ass, bitch, dick, don', f\*\*k, f\*\*\*ing, like, s\*\*t, stop, stupid, suck.
 Nontoxic: article, good, help, new, section, thank, time, use, 've, wp.
 
 ## References
