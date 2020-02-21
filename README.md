@@ -32,8 +32,10 @@ Machine learning methods can provide solutions that limit moderators' exposure t
 This project uses a [modified version](https://www.kaggle.com/c/jigsaw-toxic-comment-classification-challenge/data) of the data set from a kaggle competition in order to benchmark model performance, but the unmodified data is [available](https://figshare.com/articles/Wikipedia_Talk_Labels_Toxicity/4563973) from Wikipedia.
 
 ## Feature Engineering
+41 features were manually created, consisting of counts of sets of characters, proportions of sets of characters, counts and proportions of words, counts of lines, and average lengths of words and lines in each comment.
 
 ## Exploration
+
 
 ## References
 * Etim, Bassey. “Approve or Reject: Can You Moderate Five New York Times Comments?” *New York Times* 20 Sept. 2016, www.nytimes.com/interactive/2016/09/20/insider/approve-or-reject-moderation-quiz.html
