@@ -11,7 +11,7 @@ See my notebook "toxic-comments-projects.ipynb" for now.
 * [Background and Motivation](#background-and-motivation)
 * [Data](#data)
   * [Description](#description)
-  * [Pipeline](#pipeline)
+* [Feature Engineering](#feature-engineering)
 * [Exploration](#exploration)
 * [Revenue Maximization Strategies](#revenue-maximization-strategies)
 * [Conclusions](#conclusions)
@@ -23,9 +23,17 @@ Comments sections abound on various websites to facilitate discussion and engage
 
 [11,000 comments](www.nytimes.com/interactive/2016/09/20/insider/approve-or-reject-moderation-quiz.html) are posted to the New York Times website every day. Over 160 million comments are posted to Reddit every month. Websites employ full-time human moderators to enforce policies of civility but the job [negatively affects](https://www.theverge.com/2019/2/25/18229714/cognizant-facebook-content-moderator-interviews-trauma-working-conditions-arizona) their mental health.
 
-In order to limit moderators' exposure to damaging content and moderate consistently and efficiently at scale, machine learning methods will be explored to build an auto-moderator, in other words, a model to classify whether comments are toxic or not.
+Machine learning methods can provide solutions that limit moderators' exposure to damaging content and moderate consistently and efficiently at scale. In this project I will build an auto-moderator, in other words, a model to classify whether comments are toxic or not.
 
+## Data
+### Description
+160,000 comments from Wikipedia discussion pages were annotated by up to 10 human raters through the crowd-sourcing platform Crowdflower. Comments were rated on whether they were toxic or not (meaning whether they were likely to make people leave a discussion.) Additionally, five toxic subtypes that are not mutually exclusive were also annotated (severe toxic, obscene, threat, insult, identity hate), but the features were not used to build models in this project.  
 
+This project uses a [modified version](https://www.kaggle.com/c/jigsaw-toxic-comment-classification-challenge/data) of the data set from a kaggle competition in order to benchmark model performance, but the unmodified data is [available](https://figshare.com/articles/Wikipedia_Talk_Labels_Toxicity/4563973) from Wikipedia.
+
+## Feature Engineering
+
+## Exploration
 
 ## References
 * Etim, Bassey. “Approve or Reject: Can You Moderate Five New York Times Comments?” *New York Times* 20 Sept. 2016, www.nytimes.com/interactive/2016/09/20/insider/approve-or-reject-moderation-quiz.html
