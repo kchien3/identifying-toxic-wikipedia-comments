@@ -35,8 +35,8 @@ This project uses a [modified version](https://www.kaggle.com/c/jigsaw-toxic-com
 41 features were manually created, consisting of counts of sets of characters, proportions of sets of characters, counts and proportions of words, counts of lines, and average lengths of words and lines in each comment.
 ### Text Vectorization
 #### Term Frequency-Inverse Document Frequency
-<div align='center>
-<img src="img/tf_idf_equation.png">
+<div align='center'>
+<img src='img/tf_idf_equation.png'>
 </div>
 
 
