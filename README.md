@@ -35,15 +35,21 @@ This project uses a [modified version](https://www.kaggle.com/c/jigsaw-toxic-com
 Text must be converted into numeric features for machine learning methods to train on.
 
 41 features were manually created, consisting of counts of sets of characters, proportions of sets of characters, counts and proportions of words, counts of lines, and average lengths of words and lines in each comment.
+
 ### Text Vectorization
 Another way to convert text into numeric data is by vectorization. Word or character level n-grams can be converted into count vectors or tf-idf vectors.  
+
 #### Term Frequency-Inverse Document Frequency
 <div align='center'>
 <img src='img/tf_idf_equation.png'>
 </div>
 
-## Exploration
+Term frequency-inverse document frequency is a statistic that reflects how important a word is to a document in a corpus. The more frequent a word is within a document and the fewer the documents the word appears in, the higher its tf-df value.
 
+After appropriate train-test splitting of the data set, tf-idf vectorization resulted in a vocabulary close to 60,000, or 60,000 features for models to train on.
+
+## Exploration
+Tf-idf vectorization was used to rank word importances within the toxic and nontoxic comment classes.
 
 ## References
 * Etim, Bassey. “Approve or Reject: Can You Moderate Five New York Times Comments?” *New York Times* 20 Sept. 2016, www.nytimes.com/interactive/2016/09/20/insider/approve-or-reject-moderation-quiz.html
