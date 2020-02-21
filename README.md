@@ -49,9 +49,11 @@ Term frequency-inverse document frequency is a statistic that reflects how impor
 After appropriate train-test splitting of the data set, tf-idf vectorization resulted in a vocabulary close to 60,000, or 60,000 features for models to train on.
 
 ## Exploration
-Tf-idf vectorization was used to rank word importances within the toxic and nontoxic comment classes. The top 10 unique words within each class are (unordered):
-Toxic: ass, bitch, dick, don', f\*\*k, f\*\*\*ing, like, s\*\*t, stop, stupid, suck.
-Nontoxic: article, good, help, new, section, thank, time, use, 've, wp.
+Tf-idf vectorization was used to rank word importances within the toxic and nontoxic comment classes. The top 10 unique words within each class are (not ordered by importance):  
+Toxic: ass, bitch, dick, don', f\*\*k, f\*\*\*ing, like, s\*\*t, stop, stupid, suck.  
+Nontoxic: article, good, help, new, section, thank, time, use, 've, wp.  
+
+There is already a clear pattern in the language used in toxic versus nontoxic comments.
 
 ## References
 * Etim, Bassey. “Approve or Reject: Can You Moderate Five New York Times Comments?” *New York Times* 20 Sept. 2016, www.nytimes.com/interactive/2016/09/20/insider/approve-or-reject-moderation-quiz.html
