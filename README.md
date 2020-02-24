@@ -1,4 +1,4 @@
-See my notebook "toxic-comments-projects.ipynb" for now.
+See my [notebook](https://github.com/kchien3/toxic-comments-project/blob/master/notebooks/toxic_comments_project.ipynb) for now.
 
 # Automated Moderation
 **Identifying Toxic Comments**
