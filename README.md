@@ -65,7 +65,8 @@ One:
 </div>
 It can be observed that toxic comments (green) tend to be shorter (have fewer characters) than nontoxic comments (black). But toxic comments are also longer, as can be seen by the small peak at the right edge of the graph. Long comments (5000 characters) tend to be strings repeated until the character limit is reached.
 
-
+</br>
+</br>
 Two:
 <div align='center'>
 <img src='img/prop_uppercase.png'>
