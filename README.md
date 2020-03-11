@@ -1,4 +1,4 @@
-See my notebook "toxic-comments-projects.ipynb" for now.
+See my [notebook](https://github.com/kchien3/toxic-comments-project/blob/master/notebooks/toxic_comments_project.ipynb) for now.
 
 # Automated Moderation
 **Identifying Toxic Comments**
@@ -29,7 +29,7 @@ Machine learning methods can provide solutions that limit moderators' exposure t
 ### Description
 160,000 comments from Wikipedia discussion pages were annotated by up to 10 human raters through the crowd-sourcing platform Crowdflower. Comments were rated on whether they were toxic or not (meaning whether they were likely to make people leave a discussion.) Additionally, five toxic subtypes that are not mutually exclusive were also annotated (severe toxic, obscene, threat, insult, identity hate), but the features were not used to build models in this project.  
 
-This project uses a [modified version](https://www.kaggle.com/c/jigsaw-toxic-comment-classification-challenge/data) of the data set from a kaggle competition in order to benchmark model performance, but the unmodified data is [available](https://figshare.com/articles/Wikipedia_Talk_Labels_Toxicity/4563973) from Wikipedia.
+This project uses a [modified kaggle competition version](https://www.kaggle.com/c/jigsaw-toxic-comment-classification-challenge/data) of the data set in order to benchmark model performance, but the unmodified data is [available](https://figshare.com/articles/Wikipedia_Talk_Labels_Toxicity/4563973) from Wikipedia.
 
 ## Feature Engineering
 Text must be converted into numeric features for machine learning methods to train on.
@@ -46,10 +46,30 @@ Another way to convert text into numeric data is by vectorization. Word or chara
 
 Term frequency-inverse document frequency is a statistic that reflects how important a word is to a document in a corpus. The more frequent a word is within a document and the fewer the documents the word appears in, the higher its tf-df value.
 
-After appropriate train-test splitting of the data set, tf-idf vectorization resulted in a vocabulary close to 60,000, or 60,000 features for models to train on.
+After appropriate train-test splitting of the data set, tf-idf vectorization resulted in a vocabulary close to 60,000 -- in other words, 60,000 features for models to train on.
 
 ## Exploration
-Tf-idf vectorization was used to rank word importances within the toxic and nontoxic comment classes.
+### Important Words
+Tf-idf vectorization was used to rank word importances within the toxic and nontoxic comment classes. The top 10 unique words within each class are (not ordered by importance):  
+Toxic: ass, bitch, dick, don', f\*\*k, f\*\*\*ing, like, s\*\*t, stop, stupid, suck.  
+Nontoxic: article, good, help, new, section, thank, time, use, 've, wp.  
+
+There is already a clear pattern in the language used in toxic versus nontoxic comments.  
+
+### Distributions
+I would like to highlight two interesting differences between toxic and nontoxic comments.
+
+One:
+<div align='center'>
+<img src='img/count_char.png'>
+</div>
+It can be observed that toxic comments (green) tend to be shorter (have fewer characters) than nontoxic comments (black). But toxic comments are also longer, as can be seen by the small peak at the right edge of the graph. Long comments (5000 characters) tend to be strings repeated until the character limit is reached.
+
+Two:
+<div align='center'>
+<img src='img/prop_uppercase.png'>
+</div>
+It can be observed that toxic comments (green) tend to contain a higher proportion of uppercase characters than nontoxic comments (black). All capitalized text typically indicates shouting and it makes sense that toxic comments have an associated shouting/angry tone.
 
 ## References
 * Etim, Bassey. “Approve or Reject: Can You Moderate Five New York Times Comments?” *New York Times* 20 Sept. 2016, www.nytimes.com/interactive/2016/09/20/insider/approve-or-reject-moderation-quiz.html
