@@ -12,7 +12,12 @@ See my [notebook](https://github.com/kchien3/toxic-comments-project/blob/master/
 * [Data](#data)
   * [Description](#description)
 * [Feature Engineering](#feature-engineering)
+  * [Text Vectorization](#text-vectorization)
 * [Exploration](#exploration)
+  * [Important Words](#important-words)
+  * [Distributions[(#distributions)
+* [Modeling](#modeling)
+  * [Class Imbalance](#class-imbalance)
 * [Revenue Maximization Strategies](#revenue-maximization-strategies)
 * [Conclusions](#conclusions)
 * [Future Directions](#future-directions)
@@ -73,7 +78,18 @@ Two:
 </div>
 It can be observed that toxic comments (green) tend to contain a higher proportion of uppercase characters than nontoxic comments (black). All capitalized text typically indicates shouting and it makes sense that toxic comments have an associated shouting/angry tone.
 
+<br/>
 Only tfidf values were used as features for modeling.
+
+## Modeling
+### Train/Test Split
+The comments were split into a 75% training fold and 25% testing fold to preserve the class imbalance in the test fold.
+
+### Class Imbalance
+Approximately 10% of the comments belong to the toxic class, with the remaining comments belonging to the nontoxic class. Highly imbalanced classes will lead to models that perform poorly at identifying the minority class unless the imbalance is specifically addressed. There are various methods for addressing imbalance, including upsampling, downsampling, and changing sample weights in model fit functions. Here we will downsample the majority class to produce a class-balanced training set.
+
+### Pipeline
+Within a proper workflow, the performance of different model algorithms is compared using cross-validation. Because model features are vectorized text, the vectorization procedure must also occur after the cross-validation folds have been formed. In order to streamline the process of vectorizing text within cross-validation folds, 
 
 ## References
 * Etim, Bassey. “Approve or Reject: Can You Moderate Five New York Times Comments?” *New York Times* 20 Sept. 2016, www.nytimes.com/interactive/2016/09/20/insider/approve-or-reject-moderation-quiz.html
