@@ -96,10 +96,33 @@ A logistic regression classifier with an elastic net regularization was fit to t
 <div align='center'>
 <img src='img/elasticnetlr_features.png'>
 </div>
+The red bars correspond to the five features most indicative of a toxic comment. They are words that typically have negative valence. The blue bars are features most indicative of nontoxic comments. The heights of the bars correspond to the exponentiated feature coefficients in the classifier with the interpretation that a 1% increase in td-idf value increases the odds of the comment being toxic by the y-axis amount.
+<div align='center'>
+<img src='img/elasticnetlr_confusion_mat.png'>
+</div>
+The confusion matrix comparing predicted to actual classes shows high precision and recall.
+
+### Elastic Net Logistic Regression
+A logistic regression classifier with an elastic net regularization was fit to the training data with hyperparameters tuned by 5-fold cross-validation.
+<div align='center'>
+<img src='img/elasticnetlr_features.png'>
+</div>
 The red bars correspond to the five features most indicative of a toxic comment. They are words that typically have negative valence. The blue bars are features most indicative of nontoxic comments.
 <div align='center'>
 <img src='img/elasticnetlr_confusion_mat.png'>
 </div>
+The confusion matrix comparing predicted to actual classes shows high precision and recall.
+
+### LightGBM Gradient-Boosted Classifier
+The LightGBM implemention of a gradient-boosted classifier was fit to the training data with hyperparameters tuned by 5-fold cross-validation.
+<div align='center'>
+<img src='img/lightgbm_features.png'>
+</div>
+There are a few options for determining feature importance in gradient-boosted models. Here we observe how many splits in the decision stumps underlying the classifier contain each feature. The grey bars correspond to the 10 most important features for classifying a comment. This type of feature importance does not provide information about the direction of the relationship between features and classes, but we can reasonably conclude that the presence of swear words and insults are highly predictive of toxic comments.
+<div align='center'>
+<img src='img/lightgbm_confusion_mat.png'>
+</div>
+The confusion matrix comparing predicted to actual classes shows high precision and recall.
 
 
 ## References
