@@ -19,6 +19,8 @@ See my [notebook](https://github.com/kchien3/toxic-comments-project/blob/master/
 * [Modeling](#modeling)
   * [Train/Test Split](#train/test-split)
   * [Class Imbalance](#class-imbalance)
+  * [Elastic Net Logistic Regression](#elastic-net-logistic-regression)
+  * [LightGBM Gradient-Boosted Classifier](#lightgbm-gradient-boosted-classifier)
 * [Revenue Maximization Strategies](#revenue-maximization-strategies)
 * [Conclusions](#conclusions)
 * [Future Directions](#future-directions)
