@@ -139,6 +139,17 @@ Multinomial naive bayes is a generative model, where every feature has a probabi
 </div>
 The confusion matrix comparing predicted to actual classes shows high precision and recall.
 
+### scikit learn Random Forest
+The scikit learn implementation of Random Forest was fit to the training data with hyperparameters tuned by 5-fold cross-validation.
+<div align='center'>
+<img src='img/sk_rf_features.png'>
+</div>
+Multinomial naive bayes is a generative model, where every feature has a probability associated with the toxic and nontoxic class. Comments are classified as toxic or nontoxic, based on the the highest product of the probabilities associated with each class of its features. Here feature importance is derived by determining which features have the largest proportional difference in class probabilities. The red bars correspond to the top 5 features, where the contribution of the feature to a comment being toxic is 100-300 times the contribution to a comment being nontoxic. Similarly, the blue bars correspond to the 5 features that contribute relatively more to a nontoxic classification than to a toxic classification.
+<div align='center'>
+<img src='img/sk_rf_confusion_mat.png'>
+</div>
+The confusion matrix comparing predicted to actual classes shows high precision and recall.
+
 
 ## References
 * Etim, Bassey. “Approve or Reject: Can You Moderate Five New York Times Comments?” *New York Times* 20 Sept. 2016, www.nytimes.com/interactive/2016/09/20/insider/approve-or-reject-moderation-quiz.html
