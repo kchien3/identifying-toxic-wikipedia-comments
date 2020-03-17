@@ -104,7 +104,7 @@ The red bars correspond to the five features most indicative of a toxic comment.
 </div>
 The confusion matrix comparing predicted to actual classes shows high precision and recall.
 
-### LightGBM Gradient-Boosted Classifier
+### LightGBM Gradient-Boosting
 The LightGBM implemention of a gradient-boosted classifier was fit to the training data with hyperparameters tuned by 5-fold cross-validation.
 <div align='center'>
 <img src='img/lightgbm_features.png'>
@@ -112,6 +112,28 @@ The LightGBM implemention of a gradient-boosted classifier was fit to the traini
 There are a few options for determining feature importance in gradient-boosted models. Here we observe how many splits in the decision stumps underlying the classifier contain each feature. The grey bars correspond to the 10 most important features for classifying a comment. This type of feature importance does not provide information about the direction of the relationship between features and classes, but we can reasonably conclude that the presence of swear words and insults are highly predictive of toxic comments.
 <div align='center'>
 <img src='img/lightgbm_confusion_mat.png'>
+</div>
+The confusion matrix comparing predicted to actual classes shows high precision and recall.
+
+### Linear Soft Support Vector Machine
+A support vector machine (SVM) classifier with a soft margin and linear kernel was fit to the training data with hyperparameters tuned by 5-fold cross-validation.
+<div align='center'>
+<img src='img/svm_features.png'>
+</div>
+SVM model coefficients represent the vector orthogonal to the hyperplane separating classes with the vector pointing in the direction of the positive class (here, toxic comments). A classification is made by calculating the dot product of a vectorized comment with the SVM vector of coefficients. A positive dot product indicates the predicted class is toxic, and a negative dot product indicates the predicted class is nontoxic. Important features in this classifier are those features (words) which contribute most to this dot product. Red bars represent features that most contribute to a toxic classification, and blue bars represent features that most contribute to a nontoxic classification.
+<div align='center'>
+<img src='img/svm_confusion_mat.png'>
+</div>
+The confusion matrix comparing predicted to actual classes shows high precision and recall.
+
+### Multinomial Naive Bayes
+A multinomial naive bayes classifier was fit to the training data with hyperparameters tuned by 5-fold cross-validation.
+<div align='center'>
+<img src='img/mnb_features.png'>
+</div>
+Multinomial naive bayes is a generative model, where every feature has a probability associated with the toxic and nontoxic class. Comments are classified as toxic or nontoxic, based on the the highest product of the probabilities associated with each class of its features. Here feature importance is derived by determining which features have the largest proportional difference in class probabilities. The red bars correspond to the top 5 features, where the contribution of the feature to a comment being toxic is 100-300 times the contribution to a comment being nontoxic. Similarly, the blue bars correspond to the 5 features that contribute relatively more to a nontoxic classification than to a toxic classification.
+<div align='center'>
+<img src='img/mnb_confusion_mat.png'>
 </div>
 The confusion matrix comparing predicted to actual classes shows high precision and recall.
 
