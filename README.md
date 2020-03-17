@@ -21,6 +21,8 @@ See my [notebook](https://github.com/kchien3/toxic-comments-project/blob/master/
   * [Class Imbalance](#class-imbalance)
   * [Elastic Net Logistic Regression](#elastic-net-logistic-regression)
   * [LightGBM Gradient-Boosted Classifier](#lightgbm-gradient-boosted-classifier)
+  * [Linear Soft Support Vector Machine](#linear-soft-support-vector-machine)
+  * [Multinomial Naive Bayes](#multinomial-naive-bayes)
 * [Conclusions](#conclusions)
 * [Future Directions](#future-directions)
 * [References](#references)
