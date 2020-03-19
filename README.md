@@ -93,9 +93,10 @@ The comments were split into a 75% training fold and 25% testing fold to preserv
 Approximately 10% of the comments belong to the toxic class, with the remaining comments belonging to the nontoxic class. Highly imbalanced classes will lead to models that perform poorly at identifying the minority class unless the imbalance is specifically addressed. There are various methods for addressing imbalance, including upsampling, downsampling, and changing sample weights in model fit functions. Here we will downsample the majority class to produce a class-balanced training set.
 
 <br/><br/>
+### Model Algorithms
 A number of model algorithms were used to build classifiers. The choice of character and word n-grams were investigated within each classifier and unigrams produced models with the lowest cross-validation loss. Some classifiers are highlighted below.
 
-### Elastic Net Logistic Regression
+#### Elastic Net Logistic Regression
 A logistic regression classifier with an elastic net regularization was fit to the training data with hyperparameters tuned by 5-fold cross-validation.
 <div align='center'>
 <img src='img/elasticnetlr_features.png'>
@@ -104,9 +105,9 @@ The red bars correspond to the five features most indicative of a toxic comment.
 <div align='center'>
 <img src='img/elasticnetlr_confusion_mat.png'>
 </div>
-The confusion matrix comparing predicted to actual classes shows high precision and recall.
+The confusion matrix comparing predicted to actual classes shows relatively balanced precision and recall, indicating the original class imbalance issue was appropriately addressed.
 
-### LightGBM Gradient-Boosting
+#### LightGBM Gradient-Boosting
 The LightGBM implemention of a gradient-boosted classifier was fit to the training data with hyperparameters tuned by 5-fold cross-validation.
 <div align='center'>
 <img src='img/lightgbm_features.png'>
@@ -115,9 +116,9 @@ There are a few options for determining feature importance in gradient-boosted m
 <div align='center'>
 <img src='img/lightgbm_confusion_mat.png'>
 </div>
-The confusion matrix comparing predicted to actual classes shows high precision and recall.
+The confusion matrix comparing predicted to actual classes shows relatively balanced precision and recall, indicating the original class imbalance issue was appropriately addressed.
 
-### Linear Soft Support Vector Machine
+#### Linear Soft Support Vector Machine
 A support vector machine (SVM) classifier with a soft margin and linear kernel was fit to the training data with hyperparameters tuned by 5-fold cross-validation.
 <div align='center'>
 <img src='img/svm_features.png'>
@@ -126,9 +127,9 @@ SVM model coefficients represent the vector orthogonal to the hyperplane separat
 <div align='center'>
 <img src='img/svm_confusion_mat.png'>
 </div>
-The confusion matrix comparing predicted to actual classes shows high precision and recall.
+The confusion matrix comparing predicted to actual classes shows relatively balanced precision and recall, indicating the original class imbalance issue was appropriately addressed.
 
-### Multinomial Naive Bayes
+#### Multinomial Naive Bayes
 A multinomial naive bayes classifier was fit to the training data with hyperparameters tuned by 5-fold cross-validation.
 <div align='center'>
 <img src='img/mnb_features.png'>
@@ -137,19 +138,20 @@ Multinomial naive bayes is a generative model, where every feature has a probabi
 <div align='center'>
 <img src='img/mnb_confusion_mat.png'>
 </div>
-The confusion matrix comparing predicted to actual classes shows high precision and recall.
+The confusion matrix comparing predicted to actual classes shows relatively balanced precision and recall, indicating the original class imbalance issue was appropriately addressed.
 
-### scikit learn Random Forest
+#### scikit learn Random Forest
 The scikit learn implementation of Random Forest was fit to the training data with hyperparameters tuned by 5-fold cross-validation.
 <div align='center'>
 <img src='img/sk_rf_features.png'>
 </div>
-Multinomial naive bayes is a generative model, where every feature has a probability associated with the toxic and nontoxic class. Comments are classified as toxic or nontoxic, based on the the highest product of the probabilities associated with each class of its features. Here feature importance is derived by determining which features have the largest proportional difference in class probabilities. The red bars correspond to the top 5 features, where the contribution of the feature to a comment being toxic is 100-300 times the contribution to a comment being nontoxic. Similarly, the blue bars correspond to the 5 features that contribute relatively more to a nontoxic classification than to a toxic classification.
+A measure of feature importance in random forest models is the mean decrease in impurity (mdi) whenever a feature is used in a split. Conceptually, the random forest classifier uses rules to divide the data into smaller and smaller groups, with the hope that the resulting groups will be more pure (less impure) in class. The grey bars represent the 10 features with the highest mdi. Because there are 100 decision trees composing this random forest ensemble, standard deviations can be obtained for each feature's mdi across the trees and are represented by the black lines on top of the grey bars.
 <div align='center'>
 <img src='img/sk_rf_confusion_mat.png'>
 </div>
-The confusion matrix comparing predicted to actual classes shows high precision and recall.
+The confusion matrix comparing predicted to actual classes shows relatively balanced precision and recall, indicating the original class imbalance issue was appropriately addressed.
 
+#### Soft Voting Ensemble
 
 ## References
 * Etim, Bassey. “Approve or Reject: Can You Moderate Five New York Times Comments?” *New York Times* 20 Sept. 2016, www.nytimes.com/interactive/2016/09/20/insider/approve-or-reject-moderation-quiz.html
