@@ -222,7 +222,7 @@ In a production environment, model evaluation should not be solely based on pred
 | Elastic Net Logit      | 2.842    | 0.286   | 0.475      | 0.062     | 0.968 | 0.002   | 
 | sklearn RF             | 112.597  | 0.401   | 1.271      | 0.038     | 0.929 | 0.003   | 
 | LightGBM Classifier    | 129.962  | 0.806   | 0.894      | 0.141     | 0.967 | 0.002   | 
-| Soft Voting Ensemble\* | 242.908  | 7.552   | 9.956      | 5.467     | 0.972 | 0.001   | 
+| **Soft Voting Ensemble\*** | 242.908  | 7.552   | 9.956      | 5.467     | **0.972** | 0.001   | 
 
 \* **final model**
 
