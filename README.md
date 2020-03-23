@@ -232,6 +232,14 @@ Another observation from the model comparison is that models that linearly separ
 
 Model fitting times were not too long for any model so the soft voting ensemble classifier was chosen as the final model for this project.
 
+## Test Set Performance
+Although cross-validation can estimate a model's generalizability by estimating its test set performance, the final model should be evaluated on a holdout test set of the data. 
+<div align='center'>
+<img src='img/voting_confusion_mat_test_set.png'>
+</div>
+The confusion matrix comparing predicted to actual classes shows poor performance in identifying toxic comments. It is not clear at this point why this occurs. It is an avenue for further investigation.
+
+## Future Directions
 
 
 ## References
