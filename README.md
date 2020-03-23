@@ -19,7 +19,7 @@
   * [Class Imbalance](#class-imbalance)
   * [Model Algorithms](#model-algorithms)
     * [Elastic Net Logistic Regression](#elastic-net-logistic-regression)
-    * [LightGBM Gradient-Boosted Classifier](#lightgbm-gradient-boosted-classifier)
+    * [LightGBM Gradient-Boosting](#lightgbm-gradient-boosting)
     * [Linear Soft Support Vector Machine](#linear-soft-support-vector-machine)
     * [Multinomial Naive Bayes](#multinomial-naive-bayes)
     * [scikit learn Random Forest](#scikit-learn-Random-Forest)
