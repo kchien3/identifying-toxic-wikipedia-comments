@@ -1,5 +1,3 @@
-See my [notebook](https://github.com/kchien3/toxic-comments-project/blob/master/notebooks/toxic_comments_project.ipynb) for now.
-
 # Automated Moderation
 **Identifying Toxic Comments**
 
@@ -237,10 +235,12 @@ Although cross-validation can estimate a model's generalizability by estimating 
 <div align='center'>
 <img src='img/voting_confusion_mat_test_set.png'>
 </div>
-The confusion matrix comparing predicted to actual classes shows poor performance in identifying toxic comments. It is not clear at this point why this occurs. It is an avenue for further investigation.
+The model AUC score on the test set was 0.972. However, the confusion matrix comparing predicted to actual classes shows poor performance in identifying toxic comments. It is not clear at this point why this occurs. It is an avenue for further investigation.
 
 ## Future Directions
-
+Investigate discrepancy between test set and training set confusion matrices.
+Predict the five subclasses.
+Address unintended bias (explore models that can parse tone and context and not just offensive words.)
 
 ## References
 * Etim, Bassey. “Approve or Reject: Can You Moderate Five New York Times Comments?” *New York Times* 20 Sept. 2016, www.nytimes.com/interactive/2016/09/20/insider/approve-or-reject-moderation-quiz.html
