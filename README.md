@@ -158,15 +158,20 @@ Here we build a 'soft voting' ensemble from the following models chosen for thei
 ### Model Comparison
 In a production environment, model evaluation should not be solely based on predictive performance. The time needed to train models and score comments is also important. Below is a table summarizing various model metrics:
 
-| Model                | Fit Time | Fit std | Score Time | Score std | AUC   | AUC std | 
-|----------------------|---------:|--------:|-----------:|----------:|------:|--------:| 
-| Multinomial NB       | 2.521    | 0.172   | 0.509      | 0.09      | 0.951 | 0.002   | 
-| Elastic Net Logit    | 2.842    | 0.286   | 0.475      | 0.062     | 0.968 | 0.002   | 
-| sklearn RF           | 112.597  | 0.401   | 1.271      | 0.038     | 0.929 | 0.003   | 
-| LightGBM Classifier  | 129.962  | 0.806   | 0.894      | 0.141     | 0.967 | 0.002   | 
-| Soft Voting Ensemble | 242.908  | 7.552   | 9.956      | 5.467     | 0.972 | 0.001   | 
-
+| Model                  | Fit Time | Fit std | Score Time | Score std | AUC   | AUC std | 
+|------------------------|---------:|--------:|-----------:|----------:|------:|--------:| 
+| Linear SVC             | 2.099    | 0.061   | 0.460      | 0.05      | 0.961 | 0.002   |
+| Multinomial NB         | 2.521    | 0.172   | 0.509      | 0.09      | 0.951 | 0.002   | 
+| Elastic Net Logit      | 2.842    | 0.286   | 0.475      | 0.062     | 0.968 | 0.002   | 
+| sklearn RF             | 112.597  | 0.401   | 1.271      | 0.038     | 0.929 | 0.003   | 
+| LightGBM Classifier    | 129.962  | 0.806   | 0.894      | 0.141     | 0.967 | 0.002   | 
+| Soft Voting Ensemble\* | 242.908  | 7.552   | 9.956      | 5.467     | 0.972 | 0.001   | 
+\* **final model**
 It can be seen that the ensemble model has a higher cross-validated AUC score than the underlying models, illustrating the benefits of model ensembling. The model implementations used in this project were chosen for their fit speed. Some other models, like k-nearest-neighbors, or PCA/NMF/SVD dimensionality reduced models, were observed to have prohibitively long training times and were excluded from further investigation.
+Another observation from the model comparison is that models that linearly separate classes (linear SVC and logistic regression) perform better than models that non-linearly separate classes (random forest), providing some insight into the high-dimensional distribution of classes. The elastic net logistic regression also has a tuned regularization parameter closer to a LASSO regularizer than a ridge regularizer (not shown), indicating that relatively few features are useful in classifying comments.
+Model fitting times were not too long for any model so the soft voting ensemble classifier was chosen as the final model for this project.
+
+
 
 ## References
 * Etim, Bassey. “Approve or Reject: Can You Moderate Five New York Times Comments?” *New York Times* 20 Sept. 2016, www.nytimes.com/interactive/2016/09/20/insider/approve-or-reject-moderation-quiz.html
