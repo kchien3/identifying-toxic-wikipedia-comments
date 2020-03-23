@@ -166,6 +166,7 @@ In a production environment, model evaluation should not be solely based on pred
 | sklearn RF             | 112.597  | 0.401   | 1.271      | 0.038     | 0.929 | 0.003   | 
 | LightGBM Classifier    | 129.962  | 0.806   | 0.894      | 0.141     | 0.967 | 0.002   | 
 | Soft Voting Ensemble\* | 242.908  | 7.552   | 9.956      | 5.467     | 0.972 | 0.001   | 
+
 \* **final model**
 
 It can be seen that the ensemble model has a higher cross-validated AUC score than the underlying models, illustrating the benefits of model ensembling. The model implementations used in this project were chosen for their fit speed. Some other models, like k-nearest-neighbors, or PCA/NMF/SVD dimensionality reduced models, were observed to have prohibitively long training times and were excluded from further investigation.
