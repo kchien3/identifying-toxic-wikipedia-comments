@@ -151,10 +151,66 @@ A measure of feature importance in random forest models is the mean decrease in 
 </div>
 The confusion matrix comparing predicted to actual classes shows relatively balanced precision and recall, indicating the original class imbalance issue was appropriately addressed.
 
-#### Soft Voting Ensemble
+#### Soft Voting Ensemble\* (final model)
 Ensemble models combine the predictions from different models, with the motivation that the ensemble model will make less biased and less varied predictions than the underlying models. Theoretically, different models are randomly biased, so an ensemble will be less biased because the underlying biases will cancel out. Furthermore, the variation in predictions will be reduced by aggregating the underlying model predictions.  
 
-Here we build a 'soft voting' ensemble from the following models chosen for their good predictive performance: multinomial naive bayes, elastic net logistic regression, random forest, and LightGBM gradient boosted classifier. Each model can predict a probability for a comment being toxic, and the ensemble averages those probabilities and classifies a comment as toxic if the probability is greater than 0.5. Support vector machines cannot directly output class probabilities so it was not included in the ensemble.
+Here we build a 'soft voting' ensemble from the following models chosen for their good predictive performance: multinomial naive bayes, elastic net logistic regression, random forest, and LightGBM gradient boosted classifier. Each model can predict a probability for a comment being toxic, and the ensemble averages those probabilities and classifies a comment as toxic if the probability is greater than 0.5. Support vector machines cannot directly output class probabilities so it was not included in the ensemble. The soft voting ensemble classifier was chosen as the final model for comment classification in this project for reasons outlined in the Model Comparison section.
+<div align='center'>
+<img src='img/voting_confusion_mat.png'>
+</div>
+The confusion matrix comparing predicted to actual classes shows relatively balanced precision and recall, indicating the original class imbalance issue was appropriately addressed.  
+
+Comments that the model misclassified were studied to further investigate the model.  
+
+Here is a toxic comment misclassified as nontoxic:
+```
+...In my humble opinion this draft is a pathetically watered-down rendition of what's been discussed and usually agreed upon by everyone except you-know-who. Denazification reduced to half a sentence?...
+```
+The current model cannot understand tone.  
+
+<br><br>
+
+Here is another toxic comment misclassified as nontoxic:
+```
+ I have to put this as sittign here cackling my head off.  Are you peopel on leave from a psyche hospital?  I just found the following post from prissy Dame Ewart on some other user's talk page.
+
+Its all very weird.  This Gretaw is not me.  It seems she also is offended by Dame Sara so good on her.  Fancy this Sarah going to anothers talk page and speakign to them as though they are someone else.  That is so wacko.  Shows how you guys are.  Very delusional.
+
+Its a delicious honour to be blocked from you feral ninnys.  TY for the compliment.  I just edit on Help.com but really, what a waste of time editing anywhere, especially when no one pays for the effort.
+
+Ensure Dame Sarah reads this below the obvious delusional it is.  No one presumes to that extent unless the need some help.
+
+Why would I register an accoutn when I wont even sign posts, (too much IT nous for that whereas the rest of u dont it seems).  
+
+""User talk:Gretaw
+From Wikipedia, the free encyclopedia
+
+Jump to: navigation, search
+1.Please assume good faith when dealing with other editors. See Wikipedia:Assume good faith for the guidelines on this.  Longhair\talk  
+2.Wikipedia guidelines dictate that you assume good faith in dealing with other editors. Please stop being uncivil to your fellow editors, and assume that they are here to improve Wikipedia. Thank you.  Bidgee  
+[edit] Gundagai
+Ms Gundagai, normally I would be thrilled to be the centre of so much attention (so far all your edits, except those to your userpage, have been devoted to me), but article talk pages are for discussing the article, not for making personal attacks on other users. If you wish to give me feedback, I would be most interested to read it. The appropriate place for such postings is my userpage, not article or project space.
+If you truly object to editors ""fiddling...and inteferring with some else's words,"" then you might want to consider whether Wikipedia is the right place for you. Every time you make an edit, you acknowledge acceptance that your edits may be edited any number of times by any number of people. At the bottom of each edit page is this statement: ""If you don't want your writing to be edited mercilessly or redistributed by others, do not submit it.""
+I strongly caution you about continuing to make personal attacks on other users. The community condemns personal attacks, and should you choose to continue making them, it will result in further and longer range blocks. It's very easy to avoid such blocks by simply commenting on article content instead of editors. I'm sure we can all work together constructively and productively if we refrain from making comments about other users.
+I am very pleased that you now have an account and I think this is a sign of good faith on your behalf. So thankyou for that. I hope we are able to get these issues resolved so you may be able to enjoy contributing to Wikipedia. Sarah Ewart (Talk) """
+```
+Because a large portion of the comment quoted another user's comment, the model is unable to handle multiple authorship and classifies the comment as nontoxic, even though the non-quoted portion does have a toxic tone.
+
+<br><br>
+
+Here is a nontoxic comment classified as toxic:
+```
+hey dude i d like to know who is in charge of all of this deleting that is going on, i did a thing on the harly drags, and some punk ass f****t deleted it and i really dont appreciate that very much at all, and im kinda very extremely pissed and i think that since it wasnt good enough for yall nerds then yall should write abput it , but yall dont have any clue what it is cuz you aint been you no p***y gettin guy.... feel free to write me back dude
+```
+The shortcoming of the current model is that it does not understand tone and only looks for swear words.
+
+<br><br>
+
+Here is another nontoxic comment classified as toxic:
+```
+But keep in mind I am a gay Jew.
+```
+The main shortcoming of the current model is again highlighted. It simply determines whether comments are toxic or not based on the presence of offensive words.
 
 ### Model Comparison
 In a production environment, model evaluation should not be solely based on predictive performance. The time needed to train models and score comments is also important. Below is a table summarizing various model metrics:
