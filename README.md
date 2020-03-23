@@ -152,7 +152,8 @@ A measure of feature importance in random forest models is the mean decrease in 
 The confusion matrix comparing predicted to actual classes shows relatively balanced precision and recall, indicating the original class imbalance issue was appropriately addressed.
 
 #### Soft Voting Ensemble
-Ensemble models combine the predictions from different models, with the motivation that the ensemble model will make less biased and less varied predictions than the underlying models. Theoretically, different models are randomly biased, so an ensemble will be less biased because the underlying biases will cancel out. Furthermore, the variation in predictions will be reduced by aggregating the underlying model predictions.
+Ensemble models combine the predictions from different models, with the motivation that the ensemble model will make less biased and less varied predictions than the underlying models. Theoretically, different models are randomly biased, so an ensemble will be less biased because the underlying biases will cancel out. Furthermore, the variation in predictions will be reduced by aggregating the underlying model predictions.  
+
 Here we build a 'soft voting' ensemble from the following models chosen for their good predictive performance: multinomial naive bayes, elastic net logistic regression, random forest, and LightGBM gradient boosted classifier. Each model can predict a probability for a comment being toxic, and the ensemble averages those probabilities and classifies a comment as toxic if the probability is greater than 0.5. Support vector machines cannot directly output class probabilities so it was not included in the ensemble.
 
 ### Model Comparison
@@ -169,8 +170,10 @@ In a production environment, model evaluation should not be solely based on pred
 
 \* **final model**
 
-It can be seen that the ensemble model has a higher cross-validated AUC score than the underlying models, illustrating the benefits of model ensembling. The model implementations used in this project were chosen for their fit speed. Some other models, like k-nearest-neighbors, or PCA/NMF/SVD dimensionality reduced models, were observed to have prohibitively long training times and were excluded from further investigation.
-Another observation from the model comparison is that models that linearly separate classes (linear SVC and logistic regression) perform better than models that non-linearly separate classes (random forest), providing some insight into the high-dimensional distribution of classes. The elastic net logistic regression also has a tuned regularization parameter closer to a LASSO regularizer than a ridge regularizer (not shown), indicating that relatively few features are useful in classifying comments.
+It can be seen that the ensemble model has a higher cross-validated AUC score than the underlying models, illustrating the benefits of model ensembling. The model implementations used in this project were chosen for their fit speed. Some other models, like k-nearest-neighbors, or PCA/NMF/SVD dimensionality reduced models, were observed to have prohibitively long training times and were excluded from further investigation.  
+
+Another observation from the model comparison is that models that linearly separate classes (linear SVC and logistic regression) perform better than models that non-linearly separate classes (random forest), providing some insight into the high-dimensional distribution of classes. The elastic net logistic regression also has a tuned regularization parameter closer to a LASSO regularizer than a ridge regularizer (not shown), indicating that relatively few features are useful in classifying comments.  
+
 Model fitting times were not too long for any model so the soft voting ensemble classifier was chosen as the final model for this project.
 
 
