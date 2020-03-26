@@ -26,7 +26,7 @@
   * [Final Model (Soft Voting Ensemble)](#final-model-soft-voting-ensemble)
     * [Misclassified Examples](#misclassified-examples)
   * [Model Comparison](#model-comparison)
-* [Test Set Performance](#test-set-performance)
+  * [Test Set Performance](#test-set-performance)
 * [Future Directions](#future-directions)
 * [References](#references)
 
@@ -269,7 +269,7 @@ Another observation from the model comparison is that models that linearly separ
 
 Model fitting times were not too long for any model so the soft voting ensemble classifier was chosen as the final model for this project.
 
-## Test Set Performance
+### Test Set Performance
 Although cross-validation can estimate a model's generalizability by estimating its test set performance, the final model should be evaluated on a holdout test set of the data. 
 <div align='center'>
 <img src='img/voting_confusion_mat_test_set.png'>
