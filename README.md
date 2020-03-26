@@ -23,8 +23,8 @@
     * [Linear Soft Support Vector Machine](#linear-soft-support-vector-machine)
     * [Multinomial Naive Bayes](#multinomial-naive-bayes)
     * [scikit learn Random Forest](#scikit-learn-Random-Forest)
-    * [Soft Voting Ensemble (Final Model)](#soft-voting-ensemble-final-model)
-      * [Misclassified Examples](#misclassified-examples)
+  * [Final Model (Soft Voting Ensemble)](#soft-voting-ensemble-final-model)
+    * [Misclassified Examples](#misclassified-examples)
   * [Model Comparison](#model-comparison)
 * [Test Set Performance](#test-set-performance)
 * [Future Directions](#future-directions)
@@ -33,7 +33,7 @@
 ## Background and Motivation
 Comments sections abound on various websites to facilitate discussion and engagement between users. However, toxic and abusive comments can quickly derail discussions and cause users to permanently refrain from commenting in the future and the scale of the problem is huge.
 
-[11,000 comments](www.nytimes.com/interactive/2016/09/20/insider/approve-or-reject-moderation-quiz.html) are posted to the New York Times website every day. Over 160 million comments are posted to Reddit every month. Websites employ full-time human moderators to enforce policies of civility but the job [negatively affects](https://www.theverge.com/2019/2/25/18229714/cognizant-facebook-content-moderator-interviews-trauma-working-conditions-arizona) their mental health.
+[11,000 comments](https://www.nytimes.com/interactive/2016/09/20/insider/approve-or-reject-moderation-quiz.html) are posted to the New York Times website every day. Over 160 million comments are posted to Reddit every month. Websites employ full-time human moderators to enforce policies of civility but the job [negatively affects](https://www.theverge.com/2019/2/25/18229714/cognizant-facebook-content-moderator-interviews-trauma-working-conditions-arizona) their mental health.
 
 Machine learning methods can provide solutions that limit moderators' exposure to damaging content and moderate consistently and efficiently at scale. In this project I will build an auto-moderator, in other words, a model to classify whether comments are toxic or not.
 
@@ -154,7 +154,7 @@ A measure of feature importance in random forest models is the mean decrease in 
 </div>
 The confusion matrix comparing predicted to actual classes shows relatively balanced precision and recall, indicating the original class imbalance issue was appropriately addressed.
 
-#### Soft Voting Ensemble\* (Final Model)
+### Final Model (Soft Voting Ensemble)
 Ensemble models combine the predictions from different models, with the motivation that the ensemble model will make less biased and less varied predictions than the underlying models. Theoretically, different models are randomly biased, so an ensemble will be less biased because the underlying biases will cancel out. Furthermore, the variation in predictions will be reduced by aggregating the underlying model predictions.  
 
 Here we build a 'soft voting' ensemble from the following models chosen for their good predictive performance: multinomial naive bayes, elastic net logistic regression, random forest, and LightGBM gradient boosted classifier. Each model can predict a probability for a comment being toxic, and the ensemble averages those probabilities and classifies a comment as toxic if the probability is greater than 0.5. Support vector machines cannot directly output class probabilities so it was not included in the ensemble. The soft voting ensemble classifier was chosen as the final model for comment classification in this project for reasons outlined in the [Model Comparison](#model-comparison) section.
@@ -163,7 +163,7 @@ Here we build a 'soft voting' ensemble from the following models chosen for thei
 </div>
 The confusion matrix comparing predicted to actual classes shows relatively balanced precision and recall, indicating the original class imbalance issue was appropriately addressed.  
 
-##### Misclassified Examples
+#### Misclassified Examples
 Comments that the model misclassified were studied to further investigate the model.  
 
 Here is a toxic comment misclassified as nontoxic:
