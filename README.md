@@ -176,27 +176,54 @@ The current model cannot understand tone.
 
 Here is another toxic comment misclassified as nontoxic:
 ```
- I have to put this as sittign here cackling my head off.  Are you peopel on leave from a psyche hospital?  I just found the following post from prissy Dame Ewart on some other user's talk page.
+ I have to put this as sittign here cackling my head off.  Are you peopel on leave 
+ from a psyche hospital?  I just found the following post from prissy Dame Ewart on 
+ some other user's talk page.
 
-Its all very weird.  This Gretaw is not me.  It seems she also is offended by Dame Sara so good on her.  Fancy this Sarah going to anothers talk page and speakign to them as though they are someone else.  That is so wacko.  Shows how you guys are.  Very delusional.
+Its all very weird.  This Gretaw is not me.  It seems she also is offended by Dame 
+Sara so good on her.  Fancy this Sarah going to anothers talk page and speakign to 
+them as though they are someone else.  That is so wacko.  Shows how you guys are.  
+Very delusional.
 
-Its a delicious honour to be blocked from you feral ninnys.  TY for the compliment.  I just edit on Help.com but really, what a waste of time editing anywhere, especially when no one pays for the effort.
+Its a delicious honour to be blocked from you feral ninnys.  TY for the compliment.  
+I just edit on Help.com but really, what a waste of time editing anywhere, especially 
+when no one pays for the effort.
 
-Ensure Dame Sarah reads this below the obvious delusional it is.  No one presumes to that extent unless the need some help.
+Ensure Dame Sarah reads this below the obvious delusional it is.  No one presumes to 
+that extent unless the need some help.
 
-Why would I register an accoutn when I wont even sign posts, (too much IT nous for that whereas the rest of u dont it seems).  
+Why would I register an accoutn when I wont even sign posts, (too much IT nous for that 
+whereas the rest of u dont it seems).  
 
 ""User talk:Gretaw
 From Wikipedia, the free encyclopedia
 
 Jump to: navigation, search
-1.Please assume good faith when dealing with other editors. See Wikipedia:Assume good faith for the guidelines on this.  Longhair\talk  
-2.Wikipedia guidelines dictate that you assume good faith in dealing with other editors. Please stop being uncivil to your fellow editors, and assume that they are here to improve Wikipedia. Thank you.  Bidgee  
+1.Please assume good faith when dealing with other editors. See Wikipedia:Assume good 
+faith for the guidelines on this.  Longhair\talk  
+2.Wikipedia guidelines dictate that you assume good faith in dealing with other editors. 
+Please stop being uncivil to your fellow editors, and assume that they are here to 
+improve Wikipedia. Thank you.  Bidgee  
 [edit] Gundagai
-Ms Gundagai, normally I would be thrilled to be the centre of so much attention (so far all your edits, except those to your userpage, have been devoted to me), but article talk pages are for discussing the article, not for making personal attacks on other users. If you wish to give me feedback, I would be most interested to read it. The appropriate place for such postings is my userpage, not article or project space.
-If you truly object to editors ""fiddling...and inteferring with some else's words,"" then you might want to consider whether Wikipedia is the right place for you. Every time you make an edit, you acknowledge acceptance that your edits may be edited any number of times by any number of people. At the bottom of each edit page is this statement: ""If you don't want your writing to be edited mercilessly or redistributed by others, do not submit it.""
-I strongly caution you about continuing to make personal attacks on other users. The community condemns personal attacks, and should you choose to continue making them, it will result in further and longer range blocks. It's very easy to avoid such blocks by simply commenting on article content instead of editors. I'm sure we can all work together constructively and productively if we refrain from making comments about other users.
-I am very pleased that you now have an account and I think this is a sign of good faith on your behalf. So thankyou for that. I hope we are able to get these issues resolved so you may be able to enjoy contributing to Wikipedia. Sarah Ewart (Talk) """
+Ms Gundagai, normally I would be thrilled to be the centre of so much attention (so far 
+all your edits, except those to your userpage, have been devoted to me), but article talk 
+pages are for discussing the article, not for making personal attacks on other users. If 
+you wish to give me feedback, I would be most interested to read it. The appropriate 
+place for such postings is my userpage, not article or project space.
+If you truly object to editors ""fiddling...and inteferring with some else's words,"" 
+then you might want to consider whether Wikipedia is the right place for you. Every time 
+you make an edit, you acknowledge acceptance that your edits may be edited any number of 
+times by any number of people. At the bottom of each edit page is this statement: ""If 
+you don't want your writing to be edited mercilessly or redistributed by others, do not 
+submit it.""
+I strongly caution you about continuing to make personal attacks on other users. The 
+community condemns personal attacks, and should you choose to continue making them, it 
+will result in further and longer range blocks. It's very easy to avoid such blocks by 
+simply commenting on article content instead of editors. I'm sure we can all work together 
+constructively and productively if we refrain from making comments about other users.
+I am very pleased that you now have an account and I think this is a sign of good faith on 
+your behalf. So thankyou for that. I hope we are able to get these issues resolved so you 
+may be able to enjoy contributing to Wikipedia. Sarah Ewart (Talk) """
 ```
 Because a large portion of the comment quoted another user's comment, the model is unable to handle multiple authorship and classifies the comment as nontoxic, even though the non-quoted portion does have a toxic tone.
 
@@ -204,7 +231,11 @@ Because a large portion of the comment quoted another user's comment, the model 
 
 Here is a nontoxic comment classified as toxic:
 ```
-hey dude i d like to know who is in charge of all of this deleting that is going on, i did a thing on the harly drags, and some punk ass f****t deleted it and i really dont appreciate that very much at all, and im kinda very extremely pissed and i think that since it wasnt good enough for yall nerds then yall should write abput it , but yall dont have any clue what it is cuz you aint been you no p***y gettin guy.... feel free to write me back dude
+hey dude i d like to know who is in charge of all of this deleting that is going on, i did 
+a thing on the harly drags, and some punk ass f****t deleted it and i really dont appreciate 
+that very much at all, and im kinda very extremely pissed and i think that since it wasnt 
+good enough for yall nerds then yall should write abput it , but yall dont have any clue 
+what it is cuz you aint been you no p***y gettin guy.... feel free to write me back dude
 ```
 The shortcoming of the current model is that it does not understand tone and only looks for swear words.
 
