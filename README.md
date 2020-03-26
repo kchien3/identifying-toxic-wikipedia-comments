@@ -23,7 +23,7 @@
     * [Linear Soft Support Vector Machine](#linear-soft-support-vector-machine)
     * [Multinomial Naive Bayes](#multinomial-naive-bayes)
     * [scikit learn Random Forest](#scikit-learn-Random-Forest)
-  * [Final Model (Soft Voting Ensemble)](#soft-voting-ensemble-final-model)
+  * [Final Model (Soft Voting Ensemble)](#final-model-soft-voting-ensemble)
     * [Misclassified Examples](#misclassified-examples)
   * [Model Comparison](#model-comparison)
 * [Test Set Performance](#test-set-performance)
