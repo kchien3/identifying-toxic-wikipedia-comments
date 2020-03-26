@@ -168,7 +168,9 @@ Comments that the model misclassified were studied to further investigate the mo
 
 Here is a toxic comment misclassified as nontoxic:
 ```
-...In my humble opinion this draft is a pathetically watered-down rendition of what's been discussed and usually agreed upon by everyone except you-know-who. Denazification reduced to half a sentence?...
+...In my humble opinion this draft is a pathetically watered-down rendition of 
+what's been discussed and usually agreed upon by everyone except you-know-who. 
+Denazification reduced to half a sentence?...
 ```
 The current model cannot understand tone.  
 
