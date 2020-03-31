@@ -279,7 +279,7 @@ The model AUC score on the test set was 0.972. However, the confusion matrix com
 ## Future Directions
 * Investigate discrepancy between test set and training set confusion matrices.  
 * Predict the five subclasses.  
-* Address unintended bias (explore models that can parse tone and context and not just offensive words.)  
+* Address unintended bias (explore models that can parse tone and context and not just detect the presence of offensive words.)  
 
 ## References
 * Etim, Bassey. “Approve or Reject: Can You Moderate Five New York Times Comments?” *New York Times* 20 Sept. 2016, www.nytimes.com/interactive/2016/09/20/insider/approve-or-reject-moderation-quiz.html
