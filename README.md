@@ -1,7 +1,7 @@
 # Automated Moderation
 **Identifying Toxic Comments**
 
-## Andrew Kin-Yip Chien
+## Kin-Yip Chien
 [Linkedin](https://www.linkedin.com/in/andrew-k-chien/) | [Github](https://github.com/kchien3) | [Slides](/presentation/toxic_comments_project-slides.pdf)
 
 ## Table of Contents
