@@ -1,5 +1,5 @@
 # Automated Moderation
-**Identifying Toxic Comments**
+**Identifying Toxic Wikipedia Comments**
 
 ## Kin-Yip Chien
 [Linkedin](https://www.linkedin.com/in/kinyip-chien/) | [Github](https://github.com/kchien3) | [Slides](/presentation/toxic_comments_project-slides.pdf)
