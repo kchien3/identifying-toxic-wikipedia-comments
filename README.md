@@ -1,3 +1,5 @@
+<img src='img/social-media-moderation-system'>
+
 # Automated Moderation
 **Identifying Toxic Wikipedia Comments**
 
