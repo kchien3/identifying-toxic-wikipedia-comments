@@ -1,10 +1,10 @@
-<img src='img/social-media-moderation-system.png'>
+<img src='img/social-media-moderation-system.jpg'>
 
 # Automated Moderation
 **Identifying Toxic Wikipedia Comments**
 
 ## Kin-Yip Chien
-[Linkedin](https://www.linkedin.com/in/kinyip-chien/) | [Github](https://github.com/kchien3) | [Slides](/presentation/toxic_comments_project-slides.pdf)
+[Linkedin](https://www.linkedin.com/in/kinyip-chien/) | [Github](https://github.com/kinyipchien) | [Slides](/presentation/toxic_comments_project-slides.pdf)
 
 ## Table of Contents
 
