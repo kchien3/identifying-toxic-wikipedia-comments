@@ -1,8 +1,10 @@
-# Automated Moderation
-**Identifying Toxic Comments**
+<img src='img/social-media-moderation-system.png'>
 
-## Andrew Kin-Yip Chien
-[Linkedin](https://www.linkedin.com/in/andrew-k-chien/) | [Github](https://github.com/kchien3) | [Slides](/presentation/toxic_comments_project-slides.pdf)
+# Automated Moderation
+**Identifying Toxic Wikipedia Comments**
+
+## Kin-Yip Chien
+[Linkedin](https://www.linkedin.com/in/kinyip-chien/) | [Github](https://github.com/kinyipchien) | [Slides](/presentation/toxic_comments_project-slides.pdf)
 
 ## Table of Contents
 
