@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+#another test comment
+#test comment
+=======
+>>>>>>> parent of 9f8869c... playing with git head
 # pickle files
 *.joblib
 
