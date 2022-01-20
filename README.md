@@ -241,7 +241,7 @@ that very much at all, and im kinda very extremely pissed and i think that since
 good enough for yall nerds then yall should write abput it , but yall dont have any clue 
 what it is cuz you aint been you no p***y gettin guy.... feel free to write me back dude
 ```
-The shortcoming of the current model is that it does not understand tone and only looks for swear words.
+In this case, the human labelers determined the comment was nontoxic, but it looks toxic to me, so there may be some label quality problems in the data.
 
 <br><br>
 
@@ -249,7 +249,7 @@ Here is another nontoxic comment classified as toxic:
 ```
 But keep in mind I am a gay Jew.
 ```
-The main shortcoming of the current model is again highlighted. It simply determines whether comments are toxic or not based on the presence of offensive words.
+The shortcoming of the current model is that it does not understand tone and only looks for offensive words.
 
 ### Model Comparison
 In a production environment, model evaluation should not be solely based on predictive performance. The time needed to train models and score comments is also important. Below is a table summarizing various model metrics:
